@@ -21,7 +21,7 @@ const checkRoleRouter = require("./routes/checkRole");
 const userRouter = require("./routes/userRoute");
 const candidateRouter = require("./routes/candidateRoute");
 const electionRouter = require("./routes/electionRoute");
-
+const { jwtAuthMiddleware } = require("./jwt");
 
 const app = express();
 
