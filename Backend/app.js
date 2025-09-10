@@ -25,7 +25,8 @@ const app = express();
 
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: "https://electravotes.netlify.app", // frontend url for production
+    // origin: "http://localhost:3000", // frontend url for development
     credentials: true, // if using cookies / sessions
   })
 ); 
