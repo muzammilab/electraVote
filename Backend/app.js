@@ -5,7 +5,6 @@ const fs = require("fs"); // <-- for file system operations like creating folder
 const path = require("path"); // <-- for handling folder paths
 require("dotenv").config();
 
-
 //local Module
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
@@ -21,10 +20,8 @@ const checkRoleRouter = require("./routes/checkRole");
 const userRouter = require("./routes/userRoute");
 const candidateRouter = require("./routes/candidateRoute");
 const electionRouter = require("./routes/electionRoute");
-const { jwtAuthMiddleware } = require("./jwt");
 
 const app = express();
-
 
 app.use(
   cors({
