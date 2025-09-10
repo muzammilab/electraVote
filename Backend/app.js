@@ -26,7 +26,7 @@ const app = express();
 app.use(
   cors({
     origin: "https://electravotes.netlify.app", // frontend url for production
-    // origin: "http://localhost:3000", // frontend url for development
+    // origin: "http://localhost:3001", // frontend url for development
     credentials: true, // if using cookies / sessions
   })
 ); 
@@ -47,7 +47,7 @@ app.use("/candidate", candidateRouter);
 app.use("/election", electionRouter);
 
 
-const Port = process.env.port || 3003;
+const Port = process.env.PORT || 3003;
 mongoose
   .connect(MONGO_DB_URL)
   .then(() => {
